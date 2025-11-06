@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: question-answer-advisor
+  ai:
+    bedrock:
+      titan:
+        embedding:
+          model: amazon.titan-embed-text-v2:0
+          input-type: text
+      aws:
+        region: us-east-1
+      converse:
+        chat:
+          options:
+            model: us.anthropic.claude-sonnet-4-20250514-v1:0
+    model:
+      embedding: bedrock-titan
+server:
+  port: 50005
